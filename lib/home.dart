@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_app_clone/telas/biblioteca.dart';
+import 'package:youtube_app_clone/telas/emalta.dart';
+import 'package:youtube_app_clone/telas/inicio.dart';
+import 'package:youtube_app_clone/telas/inscricao.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,6 +14,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> telas = [Inicio(), EmAlta(), Inscricao(), Biblioteca()];
+
     return Scaffold(
       appBar: AppBar(
         //define cores padroes pros icons
@@ -38,7 +44,7 @@ class _HomeState extends State<Home> {
               })
         ],
       ),
-      body: Container(),
+      body: telas[_indiceAtual],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _indiceAtual,
           onTap: (indice) {
