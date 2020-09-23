@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
           fixedColor: Colors.red,
           items: [
             BottomNavigationBarItem(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.purple,
                 title: Text("Inicio"),
                 icon: Icon(Icons.home)),
             BottomNavigationBarItem(
